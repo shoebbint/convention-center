@@ -1,0 +1,10 @@
+.border-card{
+    border:none;
+
+}
+.card-bg-clr{
+    background-color: rgba(64, 224, 208, 0.26);
+    border-radius: 20px;
+    margin-top:-10%;
+    margin-bottom: 20px;
+}
