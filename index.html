@@ -11,6 +11,10 @@
     <script src="https://kit.fontawesome.com/f079cee9bc.js" crossorigin="anonymous"></script>
     <!-- styles css -->
     <link rel="stylesheet" href="style.css">
+    <!-- google-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -98,28 +102,31 @@
         </section>
         <!-- second-section -->
         <section class="pt-5">
-            <div class="container d-md-flex d-sm-block">
+            <div class="container d-flex flex-md-row flex-column-reverse">
                 <div class="">
                     <img class="img-sm-fluid" src="images/wedding.png" alt="">
                 </div>
-                <div class="ps-md-5 my-auto mx-sm-auto">
+                <div class="ps-md-5 my-auto mx-sm-auto position-relative">
                     <h1>Every moment is Precious </h1>
-                    <a class="text-decoration-none text-dark" href="" data-bs-toggle="tooltip" data-bs-placement="right"
-                        title="20% off on next booking">
-                        <p data-bs-toggle="tooltip">Amet minim mollit non
+                    <div class="toast toast show position-absolute toast border-start-4 " role="alert"
+                        aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header ">
+                            <img src="icons/Vector.svg" class="rounded me-2" alt="...">
+                            <strong class="me-auto">20% off on next booking</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <a class="text-decoration-none text-dark   " href="">
+
+                        <p>Amet minim mollit non
                             deserunt ullamco est
                             sit
                             aliqua dolor
                             do amet sint. Velit officia consequat duis enim velit mollit.
                             Exercitation veniam consequat sunt nostrud amet.</p>
                     </a>
-                    <!-- <div class="tooltip bs-tooltip-top" role="tooltip">
-                        <div class="tooltip-arrow"></div>
-                        <div class="tooltip-inner">
-                            20% off on next booking
-                        </div>
-                    </div> -->
-                    <div class="d-grid col-md-5 col-sm-6 mx-sm-auto mx-md-0 ">
+
+                    <div class="d-grid col-md-5 col-sm-4 mx-sm-auto mx-md-0 ">
                         <button type="button" class="btn btn-outline-warning  fw-bolder d-flex justify-content-center ">
                             Enjoy Our Album
                             <div><i class="fas fa-angle-double-right ps-2 "></i></div>
@@ -505,7 +512,109 @@
     </main>
 
     <!-- this is 5th sec -->
-    section
+
+    <section>
+        <h1 class="text-center pb-3">Event selection</h1>
+        <hr>
+        <div class="container d-flex flex-md-row flex-column-reverse gap-5 pb-5">
+            <div class="w-100  ">
+                <form>
+                    <h2 class="text-center">Event Form</h2>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option selected>Select your event</option>
+                        <option value="1">wedding event</option>
+                        <option value="2">Birthday event</option>
+                        <option value="3">Annivarsary event</option>
+                    </select>
+
+                    <select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example">
+                        <option selected>Select estimated cost</option>
+                        <option value="1">around 20$</option>
+                        <option value="2">not more than 1000$</option>
+                        <option value="3">not needed</option>
+                    </select>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Submit form
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Confirm Submition</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Are you sure to stay connect with us!
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div>
+                <div class="container w-md-50 w-sm-100 border-start">
+                    <div class="row row-cols-1 ps-5 ">
+                        <h3 class="text-center">Events we plan</h3>
+                        <div class="col d-flex align-items-center border bg-secondary text-light">
+                            <div>
+                                <img class="icon" src="icons/box.png" alt="">
+                            </div>
+                            <div class="ps-2">
+                                <h5>Wedding Planner</h5>
+                                <p>"Planners take the guesswork out of the process, making planning a wedding as
+                                    seamless and smooth as possible,"</p>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-center border">
+                            <div>
+                                <img class="icon" src="icons/house.png" alt="">
+                            </div>
+                            <div class="ps-2">
+                                <h5>Birthday Planner</h5>
+                                <p>"Planners take the guesswork out of the process, making planning a wedding as
+                                    seamless and smooth as possible,"</p>
+                            </div>
+                        </div>
+                        <div class="col d-flex align-items-center border bg-secondary text-light">
+                            <div>
+                                <img class="icon" src="icons/question.png" alt="">
+                            </div>
+                            <div class="ps-2">
+                                <h5>Annivarsary planner</h5>
+                                <p>"Planners take the guesswork out of the process, making planning a wedding as
+                                    seamless and smooth as possible,"</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- this is footer -->
     <footer class="bg-dark " style="padding:10% 0;">
         <div
